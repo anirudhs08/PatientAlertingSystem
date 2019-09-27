@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="VitalsObject.csproj">
+      <Assembly Name="VitalsObject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="100" />
+          <Metric Name="CyclomaticComplexity" Value="8" />
+          <Metric Name="ClassCoupling" Value="0" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="LinesOfCode" Value="11" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="VitalsObject">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="100" />
+              <Metric Name="CyclomaticComplexity" Value="8" />
+              <Metric Name="ClassCoupling" Value="0" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="LinesOfCode" Value="11" />
+            </Metrics>
+            <Types>
+              <NamedType Name="PatientVitals">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="8" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="7" />
+                </Metrics>
+                <Members>
+                  <Property Name="string PatientVitals.patientID" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string PatientVitals.patientID.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="11">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientVitals.patientID.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="11">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="double PatientVitals.spo2" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="double PatientVitals.spo2.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="12">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientVitals.spo2.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="12">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="double PatientVitals.pulserate" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="13">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="double PatientVitals.pulserate.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="13">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientVitals.pulserate.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="13">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="double PatientVitals.temperature" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="double PatientVitals.temperature.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="14">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientVitals.temperature.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalsObject\VitalObjectCreaterClass.cs" Line="14">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

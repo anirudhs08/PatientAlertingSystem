@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="doubleVitalValidator.csproj">
+      <Assembly Name="doubleVitalValidator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="69" />
+          <Metric Name="CyclomaticComplexity" Value="13" />
+          <Metric Name="ClassCoupling" Value="1" />
+          <Metric Name="DepthOfInheritance" Value="2" />
+          <Metric Name="LinesOfCode" Value="55" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="doubleVitalValidator">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="69" />
+              <Metric Name="CyclomaticComplexity" Value="13" />
+              <Metric Name="ClassCoupling" Value="1" />
+              <Metric Name="DepthOfInheritance" Value="2" />
+              <Metric Name="LinesOfCode" Value="55" />
+            </Metrics>
+            <Types>
+              <NamedType Name="PulseRateValidator">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="68" />
+                  <Metric Name="CyclomaticComplexity" Value="5" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="18" />
+                </Metrics>
+                <Members>
+                  <Method Name="int PulseRateValidator.ValidateVital(double minval, double maxVal, double vitalVal)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\doubleVitalValidator\ValidatorClass.cs" Line="24">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="68" />
+                      <Metric Name="CyclomaticComplexity" Value="5" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="14" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="Spo2Validator">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="72" />
+                  <Metric Name="CyclomaticComplexity" Value="3" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="16" />
+                </Metrics>
+                <Members>
+                  <Method Name="int Spo2Validator.ValidateVital(double minval, double maxVal, double vitalVal)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\doubleVitalValidator\ValidatorClass.cs" Line="42">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="72" />
+                      <Metric Name="CyclomaticComplexity" Value="3" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="12" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="TemperatureValidator">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="68" />
+                  <Metric Name="CyclomaticComplexity" Value="5" />
+                  <Metric Name="ClassCoupling" Value="1" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="16" />
+                </Metrics>
+                <Members>
+                  <Method Name="int TemperatureValidator.ValidateVital(double minval, double maxVal, double vitalVal)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\doubleVitalValidator\ValidatorClass.cs" Line="7">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="68" />
+                      <Metric Name="CyclomaticComplexity" Value="5" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="13" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

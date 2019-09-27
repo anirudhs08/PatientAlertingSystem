@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="Test_VitalValidator.csproj">
+      <Assembly Name="Test_VitalValidator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="77" />
+          <Metric Name="CyclomaticComplexity" Value="9" />
+          <Metric Name="ClassCoupling" Value="6" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="LinesOfCode" Value="85" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="Test_VitalValidator">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="77" />
+              <Metric Name="CyclomaticComplexity" Value="9" />
+              <Metric Name="ClassCoupling" Value="6" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="LinesOfCode" Value="85" />
+            </Metrics>
+            <Types>
+              <NamedType Name="TestPulseRate">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="77" />
+                  <Metric Name="CyclomaticComplexity" Value="3" />
+                  <Metric Name="ClassCoupling" Value="4" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="27" />
+                </Metrics>
+                <Members>
+                  <Method Name="void TestPulseRate.Test_PulseRate_OutOfRange()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="38">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="7" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void TestPulseRate.Test_PulseRate_WithinRange_Warning()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="46">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void TestPulseRate.Test_PulseRate_WithinRange_Normal()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="54">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="TestSpo2">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="77" />
+                  <Metric Name="CyclomaticComplexity" Value="3" />
+                  <Metric Name="ClassCoupling" Value="4" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="27" />
+                </Metrics>
+                <Members>
+                  <Method Name="void TestSpo2.Test_Spo2_OutOfRange()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="65">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="7" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void TestSpo2.Test_Spo2_WithinRange_Warning()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="73">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void TestSpo2.Test_Spo2_WithinRange_Normal()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="81">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="TestTemperature">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="77" />
+                  <Metric Name="CyclomaticComplexity" Value="3" />
+                  <Metric Name="ClassCoupling" Value="4" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="27" />
+                </Metrics>
+                <Members>
+                  <Method Name="void TestTemperature.Test_Temperature_OutOfRange()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="7" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void TestTemperature.Test_Temperature_WithinRange_Warning()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="19">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void TestTemperature.Test_Temperature_WithinRange_Normal()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_VitalValidator\UnitTest1.cs" Line="27">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

@@ -1,0 +1,452 @@
+﻿<Window x:Class="PatientAlertingSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatientAlertingSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" >
+    <Window.Resources>
+        <Style  TargetType="{x:Type Button}">
+            <!--<Setter Property="Background" Value="LightBlue"/>-->
+            <Setter Property="Background" Value="#373737" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="4" Background="{TemplateBinding Background}">
+                            <Grid>
+                                <Path x:Name="PathIcon" Width="15" Height="25" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" />
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="LightGray" />
+                                <Setter Property="Foreground" Value="White" />
+                                <Setter TargetName="PathIcon" Property="Fill" Value="Black" />
+                            </Trigger>
+                            <!--<Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="OrangeRed" />
+                                <Setter Property="Foreground" Value="White" />
+                            </Trigger>-->
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" IsEnabled="False" Background="LightCyan">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed1Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy" />
+                <TextBlock Name="textBlockSpo2Bed1" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed1" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton GroupName="lowPulseBed1" x:Name="lowPulseBed1" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="UltraBold"/>
+                <RadioButton GroupName="highPulseBed1" x:Name="highPulseBed1" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="UltraBold"/>
+                <RadioButton GroupName="lowSpo2Bed1" x:Name="lowSpo2Bed1" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="UltraBold"/>
+                <RadioButton GroupName="highSpo2Bed1" x:Name="highSpo2Bed1" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="UltraBold"/>
+                <RadioButton GroupName="lowTemperatureBed1" x:Name="lowTemperatureBed1" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="UltraBold"/>
+                <RadioButton GroupName="highTemperatureBed1" x:Name="highTemperatureBed1" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top" Foreground="Red" FontWeight="UltraBold"/>
+
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed1" Content="Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40"/>
+            <Button x:Name="undoAlertBed1" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" />
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1" Background="BlanchedAlmond" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed2Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed2" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed2" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed2" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowPulseBed2" x:Name="lowPulseBed2" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highPulseBed2" x:Name="highPulseBed2" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowSpo2Bed2" x:Name="lowSpo2Bed2" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highSpo2Bed2" x:Name="highSpo2Bed2" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowTemperatureBed2" x:Name="lowTemperatureBed2" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highTemperatureBed2" x:Name="highTemperatureBed2" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed2" Content="Reset Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40" Click="AlertBed2_Click" />
+            <Button x:Name="undoAlertBed2" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Click="UndoAlertBed2_Click"/>
+
+
+
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="2" Background="LightCyan">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed3Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed3" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed3" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed3" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" x:Name="lowPulseBed3" GroupName="lowPulseBed3" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" x:Name="highPulseBed3" GroupName="highPulseBed3"  Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" x:Name="lowSpo2Bed3" GroupName="lowSpo2Bed3"  Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" x:Name="highSpo2Bed3" GroupName="highSpo2Bed3"  Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" x:Name="lowTemperatureBed3" GroupName="lowTemperatureBed3"  Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" x:Name="highTemperatureBed3" GroupName="highTemperatureBed3"  Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed3" Content="Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40" />
+            <Button x:Name="undoAlertBed3" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center"/>
+
+
+
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="3" Background="BlanchedAlmond">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed4Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0" Background="BlanchedAlmond">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed4" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed4" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed4" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowPulseBed4" x:Name="lowPulseBed4" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highPulseBed4" x:Name="highPulseBed4" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowSpo2Bed4" x:Name="lowSpo2Bed4" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highSpo2Bed4" x:Name="highSpo2Bed4" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowTemperatureBed4" x:Name="lowTemperatureBed4" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highTemperatureBed4" x:Name="highTemperatureBed4" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed4" Content="Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40"/>
+            <Button x:Name="undoAlertBed4" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center"/>
+
+
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Background="BlanchedAlmond">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed5Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed5" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed5" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed5" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowPulseBed5" x:Name="lowPulseBed5" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highPulseBed5" x:Name="highPulseBed5" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowSpo2Bed5" x:Name="lowSpo2Bed5" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highSpo2Bed5" x:Name="highSpo2Bed5" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowTemperatureBed5" x:Name="lowTemperatureBed5" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highTemperatureBed5" x:Name="highTemperatureBed5" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed5" Content="Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40"/>
+            <Button x:Name="undoAlertBed5" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center"/>
+
+
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1" Background="LightCyan">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed6Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed6" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed6" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed6" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowPulseBed6" x:Name="lowPulseBed6" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highPulseBed6" x:Name="highPulseBed6" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowSpo2Bed6" x:Name="lowSpo2Bed6" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highSpo2Bed6" x:Name="highSpo2Bed6" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowTemperatureBed6" x:Name="lowTemperatureBed6" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highTemperatureBed6" x:Name="highTemperatureBed6" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed6" Content="Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40"/>
+            <Button x:Name="undoAlertBed6" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center"/>
+
+
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Background="BlanchedAlmond">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed7Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed7" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed7" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed7" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowPulseBed7" x:Name="lowPulseBed7" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highPulseBed7" x:Name="highPulseBed7" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowSpo2Bed7" x:Name="lowSpo2Bed7" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highSpo2Bed7" x:Name="highSpo2Bed7" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowTemperatureBed7" x:Name="lowTemperatureBed7" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highTemperatureBed7" x:Name="highTemperatureBed7" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed7" Content="Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40"/>
+            <Button x:Name="undoAlertBed7" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center"/>
+
+
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3" Background="LightCyan">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Name="Bed12" Content="Reset Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,78,41,112" Click="Button_Click"/>
+            <Image Source="/Images/bed.png" Height="50" Grid.Column="0" Grid.Row="1" Margin="37,-10,53,162"/>-->
+            <Image x:Name="Bed8Image" Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="41,10,29,10" Grid.ColumnSpan="2" />
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="textBlockPulseBed8" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="0" Grid.Column="0"  TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" RenderTransformOrigin="0.323,0.031" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockSpo2Bed8" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" Text="Spo2" FontWeight="Heavy"/>
+                <TextBlock Name="textBlockTemperatureBed8" HorizontalAlignment="Left" Margin="11,0,0,8" Grid.Row="2" Grid.Column="0" TextWrapping="Wrap" Text="Temperature" FontWeight="Heavy"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowPulseBed8" x:Name="lowPulseBed8" Content="Low" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highPulseBed8" x:Name="highPulseBed8" Content="High" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowSpo2Bed8" x:Name="lowSpo2Bed8" Content="Low" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highSpo2Bed8" x:Name="highSpo2Bed8" Content="High" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="lowTemperatureBed8" x:Name="lowTemperatureBed8" Content="Low" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+                <RadioButton Foreground="Red" FontWeight="UltraBold" GroupName="highTemperatureBed8" x:Name="highTemperatureBed8" Content="High" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Margin="10,4,0,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+
+
+
+            <Button x:Name="alertBed8" Content="Reset Alert" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Margin="49,10,49,40" Click="AlertBed8_Click"/>
+            <Button x:Name="undoAlertBed8" Content="Undo Reset" Margin="49,45,49,5" Grid.Row="2" VerticalAlignment="Center" Width="100" IsEnabled="False" HorizontalAlignment="Center" Click="UndoAlertBed8_Click"/>
+
+
+
+        </Grid>
+
+        <!--<Button Name="Bed2" Content="Reset Alert" Grid.Row="0" Grid.Column="1" Height="20" Width="80" RenderTransformOrigin="0.016,-0.554" Margin="24,31,94,89"/>
+        <Button Name="Bed3" Content="Reset Alert" Grid.Row="0" Grid.Column="2" Height="20" Width="80" Margin="26,31,92,89"/>
+        <Button Name="Bed4" Content="Reset Alert" Grid.Row="0" Grid.Column="3" Height="20" Width="80" Margin="30,31,88,89"/>
+        <Button Name="Bed5" Content="Reset Alert" Grid.Row="0" Grid.Column="4" Height="20" Width="80" Margin="30,66,49,124"/>
+        <Button Name="Bed6" Content="Reset Alert" Grid.Row="1" Grid.Column="0" Height="20" Width="80" Margin="10,34,108,86"/>
+        <Button Name="Bed7" Content="Reset Alert" Grid.Row="1" Grid.Column="1" Height="20" Width="80" Margin="24,39,94,81"/>
+        <Button Name="Bed8" Content="Reset Alert" Grid.Row="1" Grid.Column="2" Height="20" Width="80" Margin="26,39,92,81"/>
+        <Button Name="Bed9" Content="Reset Alert" Grid.Row="1" Grid.Column="3" Height="20" Width="80" Margin="30,39,88,81"/>
+        <Button Name="Bed10" Content="Reset Alert" Grid.Row="1" Grid.Column="4" Height="20" Width="80" Margin="30,74,49,115" Click="Bed10_Click"/>
+
+        
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="1" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="2" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="3" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="4" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="1" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="2" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="3" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="4" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Button Content="Undo Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="37,103,41,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="0" Grid.Column="1" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="0" Grid.Column="2" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="0" Grid.Column="3" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="0" Grid.Column="4" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="1" Grid.Column="0" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="1" Grid.Column="1" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="1" Grid.Column="2" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button Content="Undo Alert" Grid.Row="1" Grid.Column="3" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <Button x:Name="UndoBed10" Content="Undo Alert" Grid.Row="1" Grid.Column="4" Height="20" Width="80" Margin="10,103,68,87" IsEnabled="False" />
+        <TextBlock HorizontalAlignment="Left" Margin="0,157,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,178,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0" RenderTransformOrigin="0.593,0.938"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,194,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="1" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="2" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="2" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="2" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="3" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="3" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="3" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="4" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="4" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="4" Grid.Row="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="3" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,142,0,0" TextWrapping="Wrap" Text="Pulse" VerticalAlignment="Top" Grid.Column="4" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,163,0,0" TextWrapping="Wrap" Text="Spo2" VerticalAlignment="Top" Grid.Column="4" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,184,0,0" TextWrapping="Wrap" Text="Temperature" VerticalAlignment="Top" Grid.Column="4" Grid.Row="1"/>-->
+    </Grid>
+</Window>

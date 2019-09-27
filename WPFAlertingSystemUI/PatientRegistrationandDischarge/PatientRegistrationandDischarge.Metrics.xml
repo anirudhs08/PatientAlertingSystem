@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="PatientRegistrationandDischarge.csproj">
+      <Assembly Name="PatientRegistrationandDischarge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="79" />
+          <Metric Name="CyclomaticComplexity" Value="21" />
+          <Metric Name="ClassCoupling" Value="24" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="LinesOfCode" Value="351" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="PatientRegistrationandDischarge">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="79" />
+              <Metric Name="CyclomaticComplexity" Value="21" />
+              <Metric Name="ClassCoupling" Value="24" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="LinesOfCode" Value="351" />
+            </Metrics>
+            <Types>
+              <NamedType Name="IService1">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="85" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="5" />
+                  <Metric Name="DepthOfInheritance" Value="0" />
+                  <Metric Name="LinesOfCode" Value="12" />
+                </Metrics>
+                <Members>
+                  <Method Name="void IService1.RegisterPatient(string inputString)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\IService1.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="85" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="3" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void IService1.DischargePatient(int patientid)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\IService1.cs" Line="16">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="85" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="4" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="PatientDetails">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="100" />
+                  <Metric Name="CyclomaticComplexity" Value="16" />
+                  <Metric Name="ClassCoupling" Value="0" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="13" />
+                </Metrics>
+                <Members>
+                  <Property Name="int PatientDetails.PatientID" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="79">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int PatientDetails.PatientID.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="79">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.PatientID.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="79">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string PatientDetails.PatientName" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="80">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string PatientDetails.PatientName.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="80">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.PatientName.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="80">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string PatientDetails.Address" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="81">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string PatientDetails.Address.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="81">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.Address.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="81">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int PatientDetails.Contact" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="82">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int PatientDetails.Contact.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="82">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.Contact.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="82">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="int PatientDetails.BedNo" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="83">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="int PatientDetails.BedNo.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="83">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.BedNo.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="83">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string PatientDetails.BloodGroup" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="84">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string PatientDetails.BloodGroup.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="84">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.BloodGroup.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="84">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string PatientDetails.Diagnosis" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="86">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="2" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string PatientDetails.Diagnosis.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="86">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.Diagnosis.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="86">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                  <Property Name="string PatientDetails.Doctor" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="87">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="100" />
+                      <Metric Name="CyclomaticComplexity" Value="2" />
+                      <Metric Name="ClassCoupling" Value="0" />
+                      <Metric Name="LinesOfCode" Value="1" />
+                    </Metrics>
+                    <Accessors>
+                      <Method Name="string PatientDetails.Doctor.get" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="87">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                      <Method Name="void PatientDetails.Doctor.set" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="87">
+                        <Metrics>
+                          <Metric Name="MaintainabilityIndex" Value="100" />
+                          <Metric Name="CyclomaticComplexity" Value="1" />
+                          <Metric Name="ClassCoupling" Value="0" />
+                          <Metric Name="LinesOfCode" Value="1" />
+                        </Metrics>
+                      </Method>
+                    </Accessors>
+                  </Property>
+                </Members>
+              </NamedType>
+              <NamedType Name="Service1">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="56" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="8" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="68" />
+                </Metrics>
+                <Members>
+                  <Method Name="void Service1.DischargePatient(int patientid)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="63" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="LinesOfCode" Value="22" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void Service1.RegisterPatient(string inputString)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\Service1.svc.cs" Line="35">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="52" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="7" />
+                      <Metric Name="LinesOfCode" Value="41" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="SwaggerConfig">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="78" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="11" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="245" />
+                </Metrics>
+                <Members>
+                  <Method Name="void SwaggerConfig.Register()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\PatientRegistrationandDischarge\App_Start\SwaggerConfig.cs" Line="12">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="78" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="11" />
+                      <Metric Name="LinesOfCode" Value="242" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

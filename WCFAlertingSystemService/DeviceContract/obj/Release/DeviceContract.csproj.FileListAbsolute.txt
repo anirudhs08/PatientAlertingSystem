@@ -1,0 +1,5 @@
+C:\Users\320050723\source\repos\WCFAlertingSystem\DeviceContract\bin\Release\DeviceContract.dll
+C:\Users\320050723\source\repos\WCFAlertingSystem\DeviceContract\bin\Release\DeviceContract.pdb
+C:\Users\320050723\source\repos\WCFAlertingSystem\DeviceContract\obj\Release\DeviceContract.csproj.CoreCompileInputs.cache
+C:\Users\320050723\source\repos\WCFAlertingSystem\DeviceContract\obj\Release\DeviceContract.dll
+C:\Users\320050723\source\repos\WCFAlertingSystem\DeviceContract\obj\Release\DeviceContract.pdb

@@ -1,0 +1,4 @@
+C:\Users\320053936\source\repos\WpfRegistration\CodedUITestProjectPatientAlertingSystem\bin\Debug\CodedUITestProjectPatientAlertingSystem.dll
+C:\Users\320053936\source\repos\WpfRegistration\CodedUITestProjectPatientAlertingSystem\bin\Debug\CodedUITestProjectPatientAlertingSystem.pdb
+C:\Users\320053936\source\repos\WpfRegistration\CodedUITestProjectPatientAlertingSystem\obj\Debug\CodedUITestProjectPatientAlertingSystem.dll
+C:\Users\320053936\source\repos\WpfRegistration\CodedUITestProjectPatientAlertingSystem\obj\Debug\CodedUITestProjectPatientAlertingSystem.pdb

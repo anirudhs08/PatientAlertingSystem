@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="JsonInputProcessor.csproj">
+      <Assembly Name="JsonInputProcessor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="59" />
+          <Metric Name="CyclomaticComplexity" Value="3" />
+          <Metric Name="ClassCoupling" Value="6" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="LinesOfCode" Value="25" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="JsonInputProcessor">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="59" />
+              <Metric Name="CyclomaticComplexity" Value="3" />
+              <Metric Name="ClassCoupling" Value="6" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="LinesOfCode" Value="25" />
+            </Metrics>
+            <Types>
+              <NamedType Name="JsonInputProcessor">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="59" />
+                  <Metric Name="CyclomaticComplexity" Value="3" />
+                  <Metric Name="ClassCoupling" Value="6" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="21" />
+                </Metrics>
+                <Members>
+                  <Method Name="int JsonInputProcessor.ProcessJsonInput(string _jsonString)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\JsonInputProcessor\InputProcessorClass.cs" Line="9">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="59" />
+                      <Metric Name="CyclomaticComplexity" Value="3" />
+                      <Metric Name="ClassCoupling" Value="6" />
+                      <Metric Name="LinesOfCode" Value="18" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

@@ -1,0 +1,5 @@
+C:\Users\320053936\source\repos\WpfRegistration\PatientAdmissionTest\bin\Debug\PatientAdmissionTest.dll
+C:\Users\320053936\source\repos\WpfRegistration\PatientAdmissionTest\bin\Debug\PatientAdmissionTest.pdb
+C:\Users\320053936\source\repos\WpfRegistration\PatientAdmissionTest\obj\Debug\PatientAdmissionTest.csprojAssemblyReference.cache
+C:\Users\320053936\source\repos\WpfRegistration\PatientAdmissionTest\obj\Debug\PatientAdmissionTest.dll
+C:\Users\320053936\source\repos\WpfRegistration\PatientAdmissionTest\obj\Debug\PatientAdmissionTest.pdb

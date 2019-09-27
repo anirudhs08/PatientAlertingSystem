@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="Test_JsonInputProcessor.csproj">
+      <Assembly Name="Test_JsonInputProcessor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="72" />
+          <Metric Name="CyclomaticComplexity" Value="2" />
+          <Metric Name="ClassCoupling" Value="6" />
+          <Metric Name="DepthOfInheritance" Value="1" />
+          <Metric Name="LinesOfCode" Value="32" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="Test_JsonInputProcessor">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="72" />
+              <Metric Name="CyclomaticComplexity" Value="2" />
+              <Metric Name="ClassCoupling" Value="6" />
+              <Metric Name="DepthOfInheritance" Value="1" />
+              <Metric Name="LinesOfCode" Value="32" />
+            </Metrics>
+            <Types>
+              <NamedType Name="UnitTest1">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="72" />
+                  <Metric Name="CyclomaticComplexity" Value="2" />
+                  <Metric Name="ClassCoupling" Value="6" />
+                  <Metric Name="DepthOfInheritance" Value="1" />
+                  <Metric Name="LinesOfCode" Value="28" />
+                </Metrics>
+                <Members>
+                  <Method Name="void UnitTest1.Test_JsonInputProcessor_InvalidInputString()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_JsonInputProcessor\UnitTest1.cs" Line="11">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="71" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="5" />
+                      <Metric Name="LinesOfCode" Value="16" />
+                    </Metrics>
+                  </Method>
+                  <Method Name="void UnitTest1.Test_JsonInputProcessor_ValidInputString()" File="C:\Users\320050723\source\repos\WCFAlertingSystem\Test_JsonInputProcessor\UnitTest1.cs" Line="27">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="75" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="3" />
+                      <Metric Name="LinesOfCode" Value="8" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

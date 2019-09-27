@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="1.0">
+  <Targets>
+    <Target Name="VitalGeneratorDouble.csproj">
+      <Assembly Name="VitalGeneratorDouble, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <Metrics>
+          <Metric Name="MaintainabilityIndex" Value="94" />
+          <Metric Name="CyclomaticComplexity" Value="3" />
+          <Metric Name="ClassCoupling" Value="2" />
+          <Metric Name="DepthOfInheritance" Value="2" />
+          <Metric Name="LinesOfCode" Value="28" />
+        </Metrics>
+        <Namespaces>
+          <Namespace Name="VitalGeneratorDouble">
+            <Metrics>
+              <Metric Name="MaintainabilityIndex" Value="94" />
+              <Metric Name="CyclomaticComplexity" Value="3" />
+              <Metric Name="ClassCoupling" Value="2" />
+              <Metric Name="DepthOfInheritance" Value="2" />
+              <Metric Name="LinesOfCode" Value="28" />
+            </Metrics>
+            <Types>
+              <NamedType Name="PulseRateGeneratorDouble">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="94" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="2" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="8" />
+                </Metrics>
+                <Members>
+                  <Method Name="double PulseRateGeneratorDouble.GenerateVitalDouble(double minVal, double maxVal)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalGeneratorDouble\VitalGeneratorClass.cs" Line="30">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="94" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="Spo2GeneratorDouble">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="94" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="2" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="8" />
+                </Metrics>
+                <Members>
+                  <Method Name="double Spo2GeneratorDouble.GenerateVitalDouble(double minVal, double maxVal)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalGeneratorDouble\VitalGeneratorClass.cs" Line="22">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="94" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+              <NamedType Name="TemperatureGeneratorDouble">
+                <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="94" />
+                  <Metric Name="CyclomaticComplexity" Value="1" />
+                  <Metric Name="ClassCoupling" Value="2" />
+                  <Metric Name="DepthOfInheritance" Value="2" />
+                  <Metric Name="LinesOfCode" Value="7" />
+                </Metrics>
+                <Members>
+                  <Method Name="double TemperatureGeneratorDouble.GenerateVitalDouble(double minVal, double maxVal)" File="C:\Users\320050723\source\repos\WCFAlertingSystem\VitalGeneratorDouble\VitalGeneratorClass.cs" Line="14">
+                    <Metrics>
+                      <Metric Name="MaintainabilityIndex" Value="94" />
+                      <Metric Name="CyclomaticComplexity" Value="1" />
+                      <Metric Name="ClassCoupling" Value="1" />
+                      <Metric Name="LinesOfCode" Value="4" />
+                    </Metrics>
+                  </Method>
+                </Members>
+              </NamedType>
+            </Types>
+          </Namespace>
+        </Namespaces>
+      </Assembly>
+    </Target>
+  </Targets>
+</CodeMetricsReport>

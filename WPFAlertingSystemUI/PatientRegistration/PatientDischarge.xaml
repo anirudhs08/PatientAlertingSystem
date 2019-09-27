@@ -1,0 +1,50 @@
+﻿<Window x:Class="PatientRegistration.PatientDischarge"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatientRegistration"
+        mc:Ignorable="d"
+        Title="PatientDischarge" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Name="buttonDischargeBed1" Content="Discharge" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="10,31,108,89" Click="Button_Click"/>
+        <Button Content="Discharge"  Name="buttonDischargeBed2" Grid.Row="0" Grid.Column="1" Height="20" Width="80" RenderTransformOrigin="0.016,-0.554" Margin="24,31,94,89" Click="ButtonDischargeBed2_Click"/>
+        <Button Content="Discharge"  Name="buttonDischargeBed3" Grid.Row="0" Grid.Column="2" Height="20" Width="80" Margin="26,31,92,89" Click="ButtonDischargeBed3_Click"/>
+        <Button Content="Discharge"  Name="buttonDischargeBed4" Grid.Row="0" Grid.Column="3" Height="20" Width="80" Margin="30,31,88,89" Click="ButtonDischargeBed4_Click"/>
+        <Button Content="Discharge" Name="buttonDischargeBed5" Grid.Row="1" Grid.Column="0" Height="20" Width="80" Margin="10,34,108,86"/>
+        <Button Content="Discharge" Name="buttonDischargeBed6" Grid.Row="1" Grid.Column="1" Height="20" Width="80" Margin="24,39,94,81"/>
+        <Button Content="Discharge" Name="buttonDischargeBed7" Grid.Row="1" Grid.Column="2" Height="20" Width="80" Margin="26,39,92,81"/>
+        <Button Content="Discharge" Name="buttonDischargeBed8" Grid.Row="1" Grid.Column="3" Height="20" Width="80" Margin="30,39,88,81"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="1" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="2" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="3" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="4" Grid.Row="0" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="0" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="1" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="2" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <Image Source="/Images/bed.png" Stretch="Uniform" Grid.Column="3" Grid.Row="1" Height="50" Margin="60,10,10,150"/>
+        <TextBlock Name ="textBlock1" Text="ID" Grid.Column="0" Grid.Row="0" Height="20" Width="80" Margin="10,103,68,87"/>
+        <!--<Button Content="Undo Alert" Grid.Row="0" Grid.Column="0" Height="20" Width="80" Margin="10,103,68,87"/>-->
+
+        <TextBlock Name ="textBlock2" Text="ID" Grid.Row="0" Grid.Column="1" Height="20" Width="80" Margin="10,103,68,87"/>
+        <TextBlock Name ="textBlock3" Text="ID" Grid.Row="0" Grid.Column="2" Height="20" Width="80" Margin="10,103,68,87"/>
+        <TextBlock Name ="textBlock4" Text="ID" Grid.Row="0" Grid.Column="3" Height="20" Width="80" Margin="10,103,68,87"/>
+        <TextBlock Name ="textBlock5" Text="ID" Grid.Row="1" Grid.Column="0" Height="20" Width="80" Margin="10,103,68,87"/>
+        <TextBlock Name ="textBlock6" Text="ID" Grid.Row="1" Grid.Column="1" Height="20" Width="80" Margin="10,103,68,87"/>
+        <TextBlock Name ="textBlock7" Text="ID" Grid.Row="1" Grid.Column="2" Height="20" Width="80" Margin="10,103,68,87"/>
+        <TextBlock Name ="textBlock8" Text="ID" Grid.Row="1" Grid.Column="3" Height="20" Width="80" Margin="10,103,68,87"/>
+
+    </Grid>
+
+</Window>
